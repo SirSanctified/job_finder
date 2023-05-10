@@ -1,12 +1,9 @@
-import { View, Text } from 'react-native'
+import { View, Text } from "react-native";
 
-
-const Home = () => {
-    return (
-        <View>
-            <Text>Home</Text>
-        </View>
-    )
+export default function Home() {
+  return (
+    <View>
+      <Text>Home page</Text>
+    </View>
+  )
 }
-
-export default Home
