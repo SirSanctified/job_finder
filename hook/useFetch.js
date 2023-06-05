@@ -6,7 +6,7 @@ import key from '../env';
 const rapidApiKey = key.RAPID_API_KEY;
 const useFetch = (endpoint, query) => {
   const [data, setData] = useState([]);
-  const [isloading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const options = {
@@ -45,7 +45,7 @@ const useFetch = (endpoint, query) => {
     fetchData();
   }
 
-  return { data, isloading, error, refetch };
+  return { data, isLoading, error, refetch };
 };
 
 export default useFetch;

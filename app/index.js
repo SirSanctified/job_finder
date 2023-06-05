@@ -8,7 +8,8 @@ import {
 } from '../components'
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
+  const [search, setSearch] = useState("");
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite}}>
@@ -33,6 +34,13 @@ export default function Home() {
           }}
         >
           <Welcome 
+            searchTerm={search}
+            setSearchTerm={setSearch}
+            handleClick={() => {
+              if (search) {
+                router.push(`/search/${search}`)
+              }
+            }}
           />
           <Popularjobs
           />
